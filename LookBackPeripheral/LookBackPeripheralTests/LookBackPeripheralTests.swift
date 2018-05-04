@@ -1,15 +1,15 @@
 //
-//  LookBackTests.swift
-//  LookBackTests
+//  LookBackPeripheralTests.swift
+//  LookBackPeripheralTests
 //
-//  Created by Douglas Campbell on 2018-05-01.
+//  Created by Douglas Campbell on 2018-05-04.
 //  Copyright © 2018 dwbcampbell. All rights reserved.
 //
 
 import XCTest
-@testable import LookBack
+@testable import LookBackPeripheral
 
-class LookBackTests: XCTestCase {
+class LookBackPeripheralTests: XCTestCase {
     
     override func setUp() {
         super.setUp()

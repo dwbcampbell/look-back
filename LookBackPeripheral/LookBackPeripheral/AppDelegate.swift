@@ -1,8 +1,8 @@
 //
 //  AppDelegate.swift
-//  LookBack
+//  LookBackPeripheral
 //
-//  Created by Douglas Campbell on 2018-05-01.
+//  Created by Douglas Campbell on 2018-05-04.
 //  Copyright © 2018 dwbcampbell. All rights reserved.
 //
 
