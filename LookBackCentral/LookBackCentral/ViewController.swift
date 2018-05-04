@@ -7,13 +7,43 @@
 //
 
 import Cocoa
+import AVKit
+import AVFoundation
+
 
 class ViewController: NSViewController {
 
+    @IBOutlet weak var playerView: AVPlayerView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        guard let movieURL = Bundle.main.url(forResource: "9", withExtension: "mp4") else {
+            return
+        }
+        
+        let player = AVPlayer(url: movieURL)
+        playerView.player = player
+        
+        if let currentItem =  player.currentItem {
+            print("Can reverse \(currentItem.canPlayReverse)")
+        }
+        
+        NotificationCenter.default.addObserver(forName: .AVPlayerItemDidPlayToEndTime,
+                                               object: self.playerView.player!.currentItem,
+                                               queue: .main)
+        { _ in
+            
+            if let currentItem =  player.currentItem {
+                print("Can reverse \(currentItem.canPlayReverse)")
+                if currentItem.canPlayReverse {
+                    self.playerView.player!.rate = -1.0
+                }
+            } else {
+                self.playerView.player!.seek(to: kCMTimeZero)
+            }
+            
+            //self.playerView.player!.play()
+        }
     }
 
     override var representedObject: Any? {

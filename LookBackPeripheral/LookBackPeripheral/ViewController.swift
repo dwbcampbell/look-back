@@ -7,12 +7,18 @@
 //
 
 import UIKit
+import AVKit
+import AVFoundation
+
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        let movieURL = Bundle.main.url(forResource: "9", ofType: "mp4")!
+        let player = AVPlayer(url: movieURL)
+        playerView.player = player
+        playerView.play()
     }
 
     override func didReceiveMemoryWarning() {

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5E21B007209D1AEE00EC6B34 /* 9.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 5E21B006209D1AEE00EC6B34 /* 9.mp4 */; };
 		5E5D0A7F209D1429007D9C85 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5D0A7E209D1429007D9C85 /* AppDelegate.swift */; };
 		5E5D0A81209D1429007D9C85 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5D0A80209D1429007D9C85 /* ViewController.swift */; };
 		5E5D0A83209D142A007D9C85 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E5D0A82209D142A007D9C85 /* Assets.xcassets */; };
@@ -33,6 +34,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5E21B006209D1AEE00EC6B34 /* 9.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = 9.mp4; sourceTree = "<group>"; };
 		5E5D0A7B209D1429007D9C85 /* LookBackCentral.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LookBackCentral.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E5D0A7E209D1429007D9C85 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5E5D0A80209D1429007D9C85 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -76,6 +78,7 @@
 		5E5D0A72209D1429007D9C85 = {
 			isa = PBXGroup;
 			children = (
+				5E21B006209D1AEE00EC6B34 /* 9.mp4 */,
 				5E5D0A7D209D1429007D9C85 /* LookBackCentral */,
 				5E5D0A90209D142B007D9C85 /* LookBackCentralTests */,
 				5E5D0A9B209D142B007D9C85 /* LookBackCentralUITests */,
@@ -228,6 +231,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5E21B007209D1AEE00EC6B34 /* 9.mp4 in Resources */,
 				5E5D0A83209D142A007D9C85 /* Assets.xcassets in Resources */,
 				5E5D0A86209D142A007D9C85 /* Main.storyboard in Resources */,
 			);
