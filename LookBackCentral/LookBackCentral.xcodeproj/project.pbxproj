@@ -14,6 +14,8 @@
 		5E5D0A86209D142A007D9C85 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E5D0A84209D142A007D9C85 /* Main.storyboard */; };
 		5E5D0A92209D142B007D9C85 /* LookBackCentralTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5D0A91209D142B007D9C85 /* LookBackCentralTests.swift */; };
 		5E5D0A9D209D142B007D9C85 /* LookBackCentralUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5D0A9C209D142B007D9C85 /* LookBackCentralUITests.swift */; };
+		5EAC2888209DE6590074BB36 /* CentralManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EAC2887209DE6590074BB36 /* CentralManager.swift */; };
+		5EAC288B209DEE9F0074BB36 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EAC288A209DEE9F0074BB36 /* CoreBluetooth.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +50,8 @@
 		5E5D0A98209D142B007D9C85 /* LookBackCentralUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LookBackCentralUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E5D0A9C209D142B007D9C85 /* LookBackCentralUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LookBackCentralUITests.swift; sourceTree = "<group>"; };
 		5E5D0A9E209D142B007D9C85 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5EAC2887209DE6590074BB36 /* CentralManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CentralManager.swift; sourceTree = "<group>"; };
+		5EAC288A209DEE9F0074BB36 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5EAC288B209DEE9F0074BB36 /* CoreBluetooth.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +88,7 @@
 				5E5D0A90209D142B007D9C85 /* LookBackCentralTests */,
 				5E5D0A9B209D142B007D9C85 /* LookBackCentralUITests */,
 				5E5D0A7C209D1429007D9C85 /* Products */,
+				5EAC2889209DEE9F0074BB36 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -105,6 +111,7 @@
 				5E5D0A84209D142A007D9C85 /* Main.storyboard */,
 				5E5D0A87209D142A007D9C85 /* Info.plist */,
 				5E5D0A88209D142A007D9C85 /* LookBackCentral.entitlements */,
+				5EAC2887209DE6590074BB36 /* CentralManager.swift */,
 			);
 			path = LookBackCentral;
 			sourceTree = "<group>";
@@ -125,6 +132,14 @@
 				5E5D0A9E209D142B007D9C85 /* Info.plist */,
 			);
 			path = LookBackCentralUITests;
+			sourceTree = "<group>";
+		};
+		5EAC2889209DEE9F0074BB36 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5EAC288A209DEE9F0074BB36 /* CoreBluetooth.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,6 +275,7 @@
 			files = (
 				5E5D0A81209D1429007D9C85 /* ViewController.swift in Sources */,
 				5E5D0A7F209D1429007D9C85 /* AppDelegate.swift in Sources */,
+				5EAC2888209DE6590074BB36 /* CentralManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
