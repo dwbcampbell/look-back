@@ -13,12 +13,12 @@ class CentralManager :  NSObject, CBCentralManagerDelegate, CBPeripheralDelegate
 {
     static let shared = CentralManager()
     
-    var manager: CBCentralManager!
-    var peripherals: [CBPeripheral] = [CBPeripheral]()
+    var centralManager: CBCentralManager!
+    var peripheral: CBPeripheral!
     
     private override init() {
         super.init()
-        manager = CBCentralManager(delegate: self, queue: nil)
+        centralManager = CBCentralManager(delegate: self, queue: nil)
     }
     
     // MARK: CBCentralManagerDelegate
@@ -53,9 +53,9 @@ class CentralManager :  NSObject, CBCentralManagerDelegate, CBPeripheralDelegate
             print(manufacturerData)
         }
         
-        self.peripherals.append(peripheral)
-        peripheral.delegate = self
-        central.connect(peripheral, options: nil)
+        self.peripheral = peripheral
+        self.peripheral.delegate = self
+        central.connect(self.peripheral, options: nil)
         
         central.stopScan()
     }
@@ -64,11 +64,14 @@ class CentralManager :  NSObject, CBCentralManagerDelegate, CBPeripheralDelegate
     
     func centralManager(_ central: CBCentralManager, didConnect peripheral: CBPeripheral) {
         print("peripheral connected \(peripheral.name ?? "unknown")")
-        peripheral.discoverServices(nil)
+        self.peripheral.discoverServices(nil)
     }
     
     func centralManager(_ central: CBCentralManager, didDisconnectPeripheral peripheral: CBPeripheral, error: Error?) {
         print("Peripheral disconnected")
+        if let error = error {
+            print(error)
+        }
     }
     
     // MARK: CBPeripheralDelegate
